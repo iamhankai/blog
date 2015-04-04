@@ -1,0 +1,641 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>GitHub+Hexo建站指南1：配置GitHub并建立GitHub Pages | HanSir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="HanSir">
+    
+    <meta name="description" content="本指南在Win7系统下进行，其他系统请自行探索。
+1. 下载并安装 Git for Windows2. 注册 GitHub3. 配置SSH keys我们如何让本地git项目与远程的github建立联系呢？用SSH keys。
+3.1. 检查SSH keys的设置打开Git Bash，首先我们需要检查">
+    
+    
+    
+    
+    <link rel="alternative" href="/atom.xml" title="HanSir" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/H.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/author.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/fu.png" alt="HanSir" title="HanSir"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="HanSir">HanSir</a></h1>
+				<h2 class="blog-motto">to be a better man</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:hansir.net">
+						&nbsp;
+					</form>
+					
+					</li>
+					
+<li> <a title="Click for Fun" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//hansir.qiniudn.com/Hexozhuyinzhuiyue.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>Click for Fun</a>
+</li>
+					
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/11/18/GitHub-Hexo/GitHub-Hexo-1/" title="GitHub+Hexo建站指南1：配置GitHub并建立GitHub Pages" itemprop="url">GitHub+Hexo建站指南1：配置GitHub并建立GitHub Pages</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://hansir.net/about" title="HanSir" target="_blank" itemprop="author">HanSir</a>
+		
+  <p class="article-time">
+    <time datetime="2014-11-17T17:26:32.000Z" itemprop="datePublished"> 发表于 Nov 18 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-_下载并安装_Git_for_Windows"><span class="toc-number">1.</span> <span class="toc-text">1. 下载并安装 Git for Windows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-_注册_GitHub"><span class="toc-number">2.</span> <span class="toc-text">2. 注册 GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-_配置SSH_keys"><span class="toc-number">3.</span> <span class="toc-text">3. 配置SSH keys</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-_检查SSH_keys的设置"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. 检查SSH keys的设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-_生成新的SSH_Key"><span class="toc-number">3.2.</span> <span class="toc-text">3.3. 生成新的SSH Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-_添加SSH_Key到GitHub网站："><span class="toc-number">3.3.</span> <span class="toc-text">3.4. 添加SSH Key到GitHub网站：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-_测试"><span class="toc-number">3.4.</span> <span class="toc-text">3.5. 测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-_设置用户信息"><span class="toc-number">3.5.</span> <span class="toc-text">3.6. 设置用户信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-_建立你的GitHub_Pages"><span class="toc-number">4.</span> <span class="toc-text">4. 建立你的GitHub Pages</span></a></li></ol>
+		
+		</div>
+		
+		<p>本指南在Win7系统下进行，其他系统请自行探索。</p>
+<h2 id="1-_下载并安装_Git_for_Windows">1. 下载并安装 <a href="http://msysgit.github.io/" target="_blank" rel="external">Git for Windows</a></h2><h2 id="2-_注册_GitHub">2. 注册 <a href="http://www.github.com" target="_blank" rel="external">GitHub</a></h2><h2 id="3-_配置SSH_keys">3. 配置SSH keys</h2><p>我们如何让本地git项目与远程的github建立联系呢？用SSH keys。</p>
+<h3 id="3-1-_检查SSH_keys的设置">3.1. 检查SSH keys的设置</h3><p>打开Git Bash，首先我们需要检查你电脑上现有的ssh key：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    $ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">``` </span><br><span class="line">如果提示：No such file or directory 说明你是第一次使用git，直接跳到第三步，否则继续。</span><br><span class="line">  </span><br><span class="line"><span class="comment">### 3.2. 备份和移除原来的ssh key设置  </span></span><br><span class="line"></span><br><span class="line">因为已经存在key文件，所以需要备份旧的数据并删除：</span><br><span class="line">```bash </span><br><span class="line">	$ ls</span><br><span class="line">	config  id_rsa  id_rsa.pub  known_hosts</span><br><span class="line">	$ mkdir key_backup</span><br><span class="line">	$ cp id_rsa* key_backup</span><br><span class="line">	$ rm id_rsa*</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-3-_生成新的SSH_Key">3.3. 生成新的SSH Key</h3><p>输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"邮件地址@youremail.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</span><br></pre></td></tr></table></figure></p>
+<p>然后系统会要你输入加密串。这个密码会在你提交项目时使用，主要用来防止别人往你的项目里提交内容。你也可以不输入直接按回车，这样你提交项目时就不用输入，不过不太安全。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):&lt;输入加密串&gt;</span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</span><br></pre></td></tr></table></figure></p>
+<p>最后看到这样的界面，就成功设置ssh key了：  </p>
+<p><img src="http://hansir.qiniudn.com/Hexossh-key-set.png" alt=""></p>
+<h3 id="3-4-_添加SSH_Key到GitHub网站：">3.4. 添加SSH Key到GitHub网站：</h3><p>在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。  </p>
+<ul>
+<li><p>用文本编辑器打开本地~\.ssh\id_rsa.pub文件。此文件里面内容为刚才生成人密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</p>
+</li>
+<li><p>登陆github系统。点击右上角的 Settings —-&gt;SSH keys —-&gt; add SSH key，把复制的id_rsa.pub里面的内容粘贴进去，然后点击Add Key按钮即可：</p>
+</li>
+</ul>
+<p><img src="http://hansir.qiniudn.com/Hexoadd_ssh_key.jpg" alt=""></p>
+<h3 id="3-5-_测试">3.5. 测试</h3><p>可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>如果出现如下反馈：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">'github.com (207.97.227.239)'</span> can<span class="string">'t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure></p>
+<p>不要紧张，输入yes就好，然后会看到：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi &lt;em&gt;username&lt;/em&gt;! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
+<p>一切正常。</p>
+<h3 id="3-6-_设置用户信息">3.6. 设置用户信息</h3><p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是GitHub的用户名，不能使昵称。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"你的用户名"</span></span><br><span class="line">$ git config --global user.email  <span class="string">"your_email@youremail.com"</span></span><br></pre></td></tr></table></figure></p>
+<p>至此，SSH Key配置成功，本机已成功连接到github。</p>
+<h2 id="4-_建立你的GitHub_Pages">4. 建立你的GitHub Pages</h2><p>与GitHub建立好链接之后，就可以方便的使用它提供的Pages服务，GitHub Pages分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。  </p>
+<p>想建立个人博客是用的第一种，形如iamhankai.github.io这样的可访问的站，每个用户名下面只能建立一个。<br>登录github，点击页面右上角+号，Create New Repository。<br>填写项目信息：</p>
+<blockquote>
+<p>Repository name：iamhankai.github.io（有特定要求，见注释）<br>description：hansir.net（随意填写）<br>注：Github Pages的Repository名字是特定的，比如我Github账号是iamhankai，那么我Github Pages Repository名字就是iamhankai.github.io。</p>
+</blockquote>
+<p>点击<code>Create repository</code>按钮完成创建。创建后Repositories信息如下：</p>
+<p><img src="http://hansir.qiniudn.com/Hexoiamhankai_github_io.jpg" alt=""></p>
+<p>说明：创建好username.github.io项目之后，我们可以利用Hexo工具来管理它，能够方便地建立一个漂亮高效的个人网站。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/GitHub/">GitHub</a><a href="/tags/Hexo/">Hexo</a><a href="/tags/博客/">博客</a><a href="/tags/建站/">建站</a>
+  </div>
+
+</div>
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://hansir.net/2014/11/18/GitHub-Hexo/GitHub-Hexo-1/" data-title="GitHub+Hexo建站指南1：配置GitHub并建立GitHub Pages | HanSir" data-tsina="2650480414" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/11/18/GitHub-Hexo/GitHub-Hexo-2/" title="GitHub+Hexo建站指南2：搭建Hexo博客">
+  <strong>上一篇：</strong><br/>
+  <span>
+  GitHub+Hexo建站指南2：搭建Hexo博客</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/11/17/test/"  title="test">
+ <strong>下一篇：</strong><br/> 
+ <span>test
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+
+<section class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-_下载并安装_Git_for_Windows"><span class="toc-number">1.</span> <span class="toc-text">1. 下载并安装 Git for Windows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-_注册_GitHub"><span class="toc-number">2.</span> <span class="toc-text">2. 注册 GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-_配置SSH_keys"><span class="toc-number">3.</span> <span class="toc-text">3. 配置SSH keys</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-_检查SSH_keys的设置"><span class="toc-number">3.1.</span> <span class="toc-text">3.1. 检查SSH keys的设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-_生成新的SSH_Key"><span class="toc-number">3.2.</span> <span class="toc-text">3.3. 生成新的SSH Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-_添加SSH_Key到GitHub网站："><span class="toc-number">3.3.</span> <span class="toc-text">3.4. 添加SSH Key到GitHub网站：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-_测试"><span class="toc-number">3.4.</span> <span class="toc-text">3.5. 测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-_设置用户信息"><span class="toc-number">3.5.</span> <span class="toc-text">3.6. 设置用户信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-_建立你的GitHub_Pages"><span class="toc-number">4.</span> <span class="toc-text">4. 建立你的GitHub Pages</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/Apple-of-Your-Eye/" title="Apple of Your Eye">Apple of Your Eye<sup>0</sup></a></li>
+		
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>4</sup></a></li>
+		
+			<li><a href="/categories/Machine-Learning/" title="Machine Learning">Machine Learning<sup>3</sup></a></li>
+		
+			<li><a href="/categories/Python/" title="Python">Python<sup>3</sup></a></li>
+		
+			<li><a href="/categories/test/" title="test">test<sup>1</sup></a></li>
+		
+			<li><a href="/categories/数据结构/" title="数据结构">数据结构<sup>4</sup></a></li>
+		
+			<li><a href="/categories/杂技/" title="杂技">杂技<sup>2</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>3</sup></a></li>
+		
+			<li><a href="/categories/极客谈/" title="极客谈">极客谈<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 16px;">C++</a><a href="/tags/GitHub/" style="font-size: 16px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/MOOC/" style="font-size: 16px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 14px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 10px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/博客/" style="font-size: 18px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 18px;">建站</a><a href="/tags/数据结构/" style="font-size: 16px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12px;">青春</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            <a href="http://blog.sina.com.cn/s/articlelist_2650480414_1_1.html" target="_blank" title="《一舍笔记》">《一舍笔记》</a>
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2650480414&verifier=7e9eea32&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I&#39;m HanSir in Zhejiang Univ. <br/>
+			This is my blog, just enjoy it.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/kaihana" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/hankai" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		<a href="http://my.hupu.com/hand_some" target="_blank" class="icon-soccer" title="虎扑足球"></a>
+		
+		
+		<a href="https://github.com/iamhankai" target="_blank" class="icon-github" title="GitHub"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
+		
+		<a href="http://hansir.net/about" target="_blank" title="HanSir">HanSir</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"hansir"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56822152-1', 'hansir.net');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0f306e9fa8923ed1e83e8ce9a1eb33ea' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+  </body>
+</html>

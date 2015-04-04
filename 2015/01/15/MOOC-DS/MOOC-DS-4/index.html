@@ -1,0 +1,653 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>MOOC数据结构4——树（下） | HanSir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="HanSir">
+    
+    <meta name="description" content="中国大学MOOC-陈越、何钦铭-数据结构基础习题集
+04-1. Root of AVL Tree (25分)题目
+An AVL tree is a self-balancing binary search tree. In an AVL tree, the heights of the two ch">
+    
+    
+    
+    
+    <link rel="alternative" href="/atom.xml" title="HanSir" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/H.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/author.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/fu.png" alt="HanSir" title="HanSir"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="HanSir">HanSir</a></h1>
+				<h2 class="blog-motto">to be a better man</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:hansir.net">
+						&nbsp;
+					</form>
+					
+					</li>
+					
+<li> <a title="Click for Fun" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//hansir.qiniudn.com/Hexozhuyinzhuiyue.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>Click for Fun</a>
+</li>
+					
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/01/15/MOOC-DS/MOOC-DS-4/" title="MOOC数据结构4——树（下）" itemprop="url">MOOC数据结构4——树（下）</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://hansir.net/about" title="HanSir" target="_blank" itemprop="author">HanSir</a>
+		
+  <p class="article-time">
+    <time datetime="2015-01-15T12:18:58.000Z" itemprop="datePublished"> 发表于 Jan 15 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#04-1-_Root_of_AVL_Tree_(25分)"><span class="toc-number">1.</span> <span class="toc-text">04-1. Root of AVL Tree (25分)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目"><span class="toc-number">1.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#答案"><span class="toc-number">1.2.</span> <span class="toc-text">答案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-2-_File_Transfer_(25分)"><span class="toc-number">2.</span> <span class="toc-text">04-2. File Transfer (25分)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#答案-1"><span class="toc-number">2.2.</span> <span class="toc-text">答案</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p><a href="http://www.patest.cn/contests/mooc-ds" target="_blank" rel="external">中国大学MOOC-陈越、何钦铭-数据结构基础习题集</a></p>
+<h2 id="04-1-_Root_of_AVL_Tree_(25分)">04-1. Root of AVL Tree (25分)</h2><h3 id="题目">题目</h3><blockquote>
+<p>An AVL tree is a self-balancing binary search tree. In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ by more than one, rebalancing is done to restore this property. Figures 1-4 illustrate the rotation rules.<br><img src="http://www.patest.cn/upload/79_mtxjq1kj3gx.jpg" alt=""> <img src="http://www.patest.cn/upload/79_mtxjqnwja2o.jpg" alt=""><br><img src="http://www.patest.cn/upload/79_mtxjr4gyzdg.jpg" alt=""> <img src="http://www.patest.cn/upload/79_mtxjrh51o9y.jpg" alt=""><br>Now given a sequence of insertions, you are supposed to tell the root of the resulting AVL tree.</p>
+<p><strong>Input Specification:</strong><br>Each input file contains one test case. For each case, the first line contains a positive integer N (&lt;=20) which is the total number of keys to be inserted. Then N distinct integer keys are given in the next line. All the numbers in a line are separated by a space.</p>
+<p><strong>Output Specification:</strong><br>For each test case, print ythe root of the resulting AVL tree in one line.</p>
+<p><strong>Sample Input 1:</strong></p>
+<p>5<br>88 70 61 96 120</p>
+<p><strong>Sample Output 1:</strong></p>
+<p>70</p>
+<p><strong>Sample Input 2:</strong></p>
+<p>7<br>88 70 61 96 120 90 65</p>
+<p><strong>Sample Output 2:</strong></p>
+<p>88</p>
+</blockquote>
+<h3 id="答案">答案</h3><p>解析：<br>考察点为平衡二叉树AVL树的建立、调整。AVL树的调整是有点繁琐，下面的实现我还得看着课件慢慢来。</p>
+<p>C++代码如下</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">#include</span> <span class="subst">&lt;</span>iostream<span class="subst">&gt;</span></span><br><span class="line"><span class="variable">#include</span> <span class="subst">&lt;</span>algorithm<span class="subst">&gt;</span></span><br><span class="line"><span class="comment">//04-1. Root of AVL Tree</span></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">typedef struct AVLTreeNode<span class="subst">*</span> AVLTree;</span><br><span class="line">typedef struct AVLTreeNode&#123;</span><br><span class="line">	int <span class="built_in">data</span>;</span><br><span class="line">	AVLTree lchild;</span><br><span class="line">	AVLTree rchild;</span><br><span class="line">	int height;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//子函数</span></span><br><span class="line">AVLTree AVLInsertion( int x, AVLTree T );</span><br><span class="line">int GetHeight(AVLTree T);</span><br><span class="line">AVLTree SingleLeftRotation ( AVLTree A );</span><br><span class="line">AVLTree SingleRightRotation ( AVLTree A );</span><br><span class="line">AVLTree DoubleLeftRightRotation ( AVLTree A );</span><br><span class="line">AVLTree DoubleRightLeftRotation ( AVLTree A );</span><br><span class="line"><span class="comment">//主程序</span></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int N;</span><br><span class="line">	cin<span class="subst">&gt;&gt;</span>N;</span><br><span class="line">	AVLTree Tree<span class="subst">=</span><span class="built_in">NULL</span>;</span><br><span class="line">	for(int i<span class="subst">=</span><span class="number">0</span>;i<span class="subst">&lt;</span>N;i<span class="subst">++</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		int x;</span><br><span class="line">		cin<span class="subst">&gt;&gt;</span>x;</span><br><span class="line">		Tree <span class="subst">=</span> AVLInsertion( x, Tree );</span><br><span class="line">	&#125;</span><br><span class="line">	cout<span class="subst">&lt;&lt;</span>Tree<span class="subst">-&gt;</span><span class="built_in">data</span><span class="subst">&lt;&lt;</span>endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//将x 插入AVL 树T  中，并且返回调整后的AVL 树</span></span><br><span class="line">AVLTree AVLInsertion( int x, AVLTree T )</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//若插入空树，则新建包含一个结点的树</span></span><br><span class="line">	<span class="keyword">if</span>(<span class="subst">!</span>T)</span><br><span class="line">	&#123;</span><br><span class="line">		T <span class="subst">=</span> (AVLTree)malloc(sizeof(struct AVLTreeNode));</span><br><span class="line">		T<span class="subst">-&gt;</span><span class="built_in">data</span><span class="subst">=</span>x;</span><br><span class="line">		T<span class="subst">-&gt;</span>lchild<span class="subst">=</span><span class="built_in">NULL</span>;</span><br><span class="line">		T<span class="subst">-&gt;</span>rchild<span class="subst">=</span><span class="built_in">NULL</span>;</span><br><span class="line">		T<span class="subst">-&gt;</span>height<span class="subst">=</span><span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(x <span class="subst">&lt;</span> T<span class="subst">-&gt;</span><span class="built_in">data</span>)<span class="comment">//插入T的左子树</span></span><br><span class="line">	&#123;</span><br><span class="line">		T<span class="subst">-&gt;</span>lchild<span class="subst">=</span>AVLInsertion(x,T<span class="subst">-&gt;</span>lchild);</span><br><span class="line">		<span class="keyword">if</span>(GetHeight(T<span class="subst">-&gt;</span>lchild)<span class="attribute">-GetHeight</span>(T<span class="subst">-&gt;</span>rchild)<span class="subst">==</span><span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(x <span class="subst">&lt;</span> T<span class="subst">-&gt;</span>lchild<span class="subst">-&gt;</span><span class="built_in">data</span>)</span><br><span class="line">				T <span class="subst">=</span> SingleLeftRotation(T);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				T <span class="subst">=</span> DoubleLeftRightRotation(T);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(x <span class="subst">&gt;</span> T<span class="subst">-&gt;</span><span class="built_in">data</span>)<span class="comment">//插入T的右子树</span></span><br><span class="line">	&#123;</span><br><span class="line">		T<span class="subst">-&gt;</span>rchild<span class="subst">=</span>AVLInsertion(x,T<span class="subst">-&gt;</span>rchild);</span><br><span class="line">		<span class="keyword">if</span>(GetHeight(T<span class="subst">-&gt;</span>lchild)<span class="attribute">-GetHeight</span>(T<span class="subst">-&gt;</span>rchild)<span class="subst">==-</span><span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(x <span class="subst">&gt;</span> T<span class="subst">-&gt;</span>rchild<span class="subst">-&gt;</span><span class="built_in">data</span>)</span><br><span class="line">				T <span class="subst">=</span> SingleRightRotation(T);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				T <span class="subst">=</span> DoubleRightLeftRotation(T);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//更新树高</span></span><br><span class="line">	T<span class="subst">-&gt;</span>height <span class="subst">=</span> <span class="keyword">max</span>(GetHeight(T<span class="subst">-&gt;</span>lchild),GetHeight(T<span class="subst">-&gt;</span>rchild))<span class="subst">+</span><span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取树高</span></span><br><span class="line">int GetHeight(AVLTree T)</span><br><span class="line">&#123;</span><br><span class="line">	int height<span class="subst">=</span><span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(<span class="subst">!</span>T)</span><br><span class="line">		height <span class="subst">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		height <span class="subst">=</span> <span class="number">1</span><span class="subst">+</span><span class="keyword">max</span>(GetHeight(T<span class="subst">-&gt;</span>lchild),GetHeight(T<span class="subst">-&gt;</span>rchild));</span><br><span class="line">	<span class="keyword">return</span> height;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//左单转</span></span><br><span class="line">AVLTree SingleLeftRotation ( AVLTree A )</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//旋转操作</span></span><br><span class="line">	AVLTree B <span class="subst">=</span> A<span class="subst">-&gt;</span>lchild;</span><br><span class="line">	A<span class="subst">-&gt;</span>lchild <span class="subst">=</span> B<span class="subst">-&gt;</span>rchild;</span><br><span class="line">	B<span class="subst">-&gt;</span>rchild <span class="subst">=</span> A;</span><br><span class="line">	<span class="comment">//更新 A 与 B 的高度</span></span><br><span class="line">	A<span class="subst">-&gt;</span>height <span class="subst">=</span> <span class="keyword">max</span>(GetHeight(A<span class="subst">-&gt;</span>lchild),GetHeight(A<span class="subst">-&gt;</span>rchild))<span class="subst">+</span><span class="number">1</span>;</span><br><span class="line">	B<span class="subst">-&gt;</span>height <span class="subst">=</span> <span class="keyword">max</span>(GetHeight(B<span class="subst">-&gt;</span>lchild),A<span class="subst">-&gt;</span>height)<span class="subst">+</span><span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> B;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//右单转</span></span><br><span class="line">AVLTree SingleRightRotation ( AVLTree A )</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//旋转操作</span></span><br><span class="line">	AVLTree B <span class="subst">=</span> A<span class="subst">-&gt;</span>rchild;</span><br><span class="line">	A<span class="subst">-&gt;</span>rchild <span class="subst">=</span> B<span class="subst">-&gt;</span>lchild;</span><br><span class="line">	B<span class="subst">-&gt;</span>lchild <span class="subst">=</span> A;</span><br><span class="line">	<span class="comment">//更新 A 与 B 的高度</span></span><br><span class="line">	A<span class="subst">-&gt;</span>height <span class="subst">=</span> <span class="keyword">max</span>(GetHeight(A<span class="subst">-&gt;</span>lchild),GetHeight(A<span class="subst">-&gt;</span>rchild))<span class="subst">+</span><span class="number">1</span>;</span><br><span class="line">	B<span class="subst">-&gt;</span>height <span class="subst">=</span> <span class="keyword">max</span>(GetHeight(B<span class="subst">-&gt;</span>rchild),A<span class="subst">-&gt;</span>height)<span class="subst">+</span><span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> B;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//左右双转</span></span><br><span class="line">AVLTree DoubleLeftRightRotation ( AVLTree A )</span><br><span class="line">&#123;</span><br><span class="line">	A<span class="subst">-&gt;</span>lchild <span class="subst">=</span> SingleRightRotation(A<span class="subst">-&gt;</span>lchild);<span class="comment">//将B与C做右单旋,C被返回</span></span><br><span class="line">	<span class="keyword">return</span> SingleLeftRotation(A);<span class="comment">//将A与C做左单旋，C被返回</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//右左双转</span></span><br><span class="line">AVLTree DoubleRightLeftRotation ( AVLTree A )</span><br><span class="line">&#123;</span><br><span class="line">	A<span class="subst">-&gt;</span>rchild <span class="subst">=</span> SingleLeftRotation(A<span class="subst">-&gt;</span>rchild);<span class="comment">//将B与C做左单旋,C被返回</span></span><br><span class="line">	<span class="keyword">return</span> SingleRightRotation(A);<span class="comment">//将A与C做右单旋，C被返回</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="04-2-_File_Transfer_(25分)">04-2. File Transfer (25分)</h2><h3 id="题目-1">题目</h3><blockquote>
+<p>We have a network of computers and a list of bi-directional connections. Each of these connections allows a file transfer from one computer to another. Is it possible to send a file from any computer on the network to any other?</p>
+<p><strong>Input Specification:</strong><br>Each input file contains one test case. For each test case, the first line contains N (2&lt;=N&lt;=104), the total number of computers in a network. Each computer in the network is then represented by a positive integer between 1 and N. Then in the following lines, the input is given in the format:</p>
+<p>I c1 c2  </p>
+</blockquote>
+<p>where <strong>I</strong> stands for inputting a connection between <strong>c1</strong> and <strong>c2</strong>; or</p>
+<p>C c1 c2   </p>
+<p>where <strong>C</strong> stands for checking if it is possible to transfer files between <strong>c1</strong> and <strong>c2</strong>; or</p>
+<p>S</p>
+<p>where <strong>S</strong> stands for stopping this case.<br>&gt;</p>
+<blockquote>
+<p><strong>Output Specification:</strong><br>For each <strong>C</strong> case, print in one line the word “yes” or “no” if it is possible or impossible to transfer files between <strong>c1</strong> and <strong>c2</strong>, respectively. At the end of each case, print in one line “The network is connected.” if there is a path between any pair of computers; or “There are <strong>k</strong> components.” where k is the number of connected components in this network.</p>
+<p><strong>Sample Input 1:</strong></p>
+<p>5<br>C 3 2<br>I 3 2<br>C 1 5<br>I 4 5<br>I 2 4<br>C 3 5<br>S</p>
+<p><strong>Sample Output 1:</strong></p>
+<p>no<br>no<br>yes<br>There are 2 components.</p>
+<p><strong>Sample Input 2:</strong></p>
+<p>5<br>C 3 2<br>I 3 2<br>C 1 5<br>I 4 5<br>I 2 4<br>C 3 5<br>I 1 3<br>C 1 5<br>S</p>
+<p><strong>Sample Output 2:</strong></p>
+<p>no<br>no<br>yes<br>yes<br>The network is connected.</p>
+</blockquote>
+<h3 id="答案-1">答案</h3><p>解析：<br>考察点为并查集的合并、查找。如果按照课件中典型的方式来实现，查找的速度较慢，在最后两个测试点（数据量大）通不过，显示运行超时。所以改用数组存储，下标表示computer编号，元素值表示其所在集合的根结点。还有个技巧就是，在构建并查集（利用查找操作）时，如果x不是根结点，把x接到根结点下面，这样以后的查找就很快了（O(1)）。</p>
+<p>C++代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></span><br><span class="line"><span class="comment">//04-2. File Transfer</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="comment">//子函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> S[], <span class="keyword">int</span> x)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> S[], <span class="keyword">int</span> x1, <span class="keyword">int</span> x2)</span></span>;</span><br><span class="line"><span class="comment">//主程序</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;N;</span><br><span class="line">	<span class="comment">//集合初始化</span></span><br><span class="line">	<span class="keyword">int</span> S[<span class="number">10001</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N+<span class="number">1</span>;i++)</span><br><span class="line">		S[i]=i;</span><br><span class="line">	<span class="comment">//根据输入命令操作</span></span><br><span class="line">	<span class="keyword">char</span> cmd;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;cmd;</span><br><span class="line">	<span class="keyword">while</span>(cmd!=<span class="string">'S'</span>)<span class="comment">//S stands for stopping this case</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> x1,x2;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;x1&gt;&gt;x2;</span><br><span class="line">		<span class="keyword">if</span>(cmd==<span class="string">'I'</span>)</span><br><span class="line">			Union(S,x1,x2);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(cmd==<span class="string">'C'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(Find(S,x1)==Find(S,x2))</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"yes"</span>&lt;&lt;endl;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">"no"</span>&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;cmd;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//判断整个网络分为几部分</span></span><br><span class="line">	<span class="keyword">int</span> cnt=<span class="number">0</span>; <span class="comment">//不同根结点的数目，即网络分为几个部分</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N+<span class="number">1</span>;i++)</span><br><span class="line">		<span class="keyword">if</span>(S[i]==i)<span class="comment">//下标和元素值相等，就是根结点</span></span><br><span class="line">			cnt++;</span><br><span class="line">	<span class="keyword">if</span>(cnt==<span class="number">1</span>)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"The network is connected."</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"There are "</span>&lt;&lt;cnt&lt;&lt;<span class="string">" components."</span>&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//找到x所属集合， 返回树根结点在数组S[]中的下标</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> S[], <span class="keyword">int</span> x)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(S[x]==x) <span class="comment">//下标和元素值相等，x就是根结点</span></span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">else</span>&#123; <span class="comment">//x不是根结点，寻找他的父节点S[x]所在集合的根结点</span></span><br><span class="line">		S[x]=Find(S,S[x]);<span class="comment">//把x接到根结点</span></span><br><span class="line">		<span class="keyword">return</span> S[x];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//集合的并运算</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> S[], <span class="keyword">int</span> x1, <span class="keyword">int</span> x2)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="comment">//找到X1和X2两个元素所在集合树的根结点</span></span><br><span class="line">	<span class="keyword">int</span> Root1,Root2;</span><br><span class="line">	Root1 = Find(S,x1);</span><br><span class="line">	Root2 = Find(S,x2);</span><br><span class="line">	<span class="comment">//如果它们不同根，则将其中一个根结点的父结点设置成另一根结点的下标</span></span><br><span class="line">	<span class="keyword">if</span>(Root1!=Root2)</span><br><span class="line">		S[Root2]=Root1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/数据结构/">数据结构</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/AVL树/">AVL树</a><a href="/tags/C/">C++</a><a href="/tags/MOOC/">MOOC</a><a href="/tags/并查集/">并查集</a><a href="/tags/数据结构/">数据结构</a><a href="/tags/树/">树</a>
+  </div>
+
+</div>
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://hansir.net/2015/01/15/MOOC-DS/MOOC-DS-4/" data-title="MOOC数据结构4——树（下） | HanSir" data-tsina="2650480414" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/01/26/Think-in-Deep/do-like-a-younger/" title="年轻人，用青春去奋斗啊">
+  <strong>上一篇：</strong><br/>
+  <span>
+  年轻人，用青春去奋斗啊</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/12/26/MOOC-DS/MOOC-DS-3/"  title="MOOC数据结构3——树（上）">
+ <strong>下一篇：</strong><br/> 
+ <span>MOOC数据结构3——树（上）
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+
+<section class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#04-1-_Root_of_AVL_Tree_(25分)"><span class="toc-number">1.</span> <span class="toc-text">04-1. Root of AVL Tree (25分)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目"><span class="toc-number">1.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#答案"><span class="toc-number">1.2.</span> <span class="toc-text">答案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-2-_File_Transfer_(25分)"><span class="toc-number">2.</span> <span class="toc-text">04-2. File Transfer (25分)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#答案-1"><span class="toc-number">2.2.</span> <span class="toc-text">答案</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/Apple-of-Your-Eye/" title="Apple of Your Eye">Apple of Your Eye<sup>0</sup></a></li>
+		
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>4</sup></a></li>
+		
+			<li><a href="/categories/Machine-Learning/" title="Machine Learning">Machine Learning<sup>3</sup></a></li>
+		
+			<li><a href="/categories/Python/" title="Python">Python<sup>3</sup></a></li>
+		
+			<li><a href="/categories/test/" title="test">test<sup>1</sup></a></li>
+		
+			<li><a href="/categories/数据结构/" title="数据结构">数据结构<sup>4</sup></a></li>
+		
+			<li><a href="/categories/杂技/" title="杂技">杂技<sup>2</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>3</sup></a></li>
+		
+			<li><a href="/categories/极客谈/" title="极客谈">极客谈<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 16px;">C++</a><a href="/tags/GitHub/" style="font-size: 16px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/MOOC/" style="font-size: 16px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 14px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 10px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/博客/" style="font-size: 18px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 18px;">建站</a><a href="/tags/数据结构/" style="font-size: 16px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12px;">青春</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            <a href="http://blog.sina.com.cn/s/articlelist_2650480414_1_1.html" target="_blank" title="《一舍笔记》">《一舍笔记》</a>
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2650480414&verifier=7e9eea32&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I&#39;m HanSir in Zhejiang Univ. <br/>
+			This is my blog, just enjoy it.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/kaihana" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/hankai" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		<a href="http://my.hupu.com/hand_some" target="_blank" class="icon-soccer" title="虎扑足球"></a>
+		
+		
+		<a href="https://github.com/iamhankai" target="_blank" class="icon-github" title="GitHub"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
+		
+		<a href="http://hansir.net/about" target="_blank" title="HanSir">HanSir</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"hansir"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56822152-1', 'hansir.net');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0f306e9fa8923ed1e83e8ce9a1eb33ea' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+  </body>
+</html>

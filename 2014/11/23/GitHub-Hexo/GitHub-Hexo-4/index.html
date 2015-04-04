@@ -1,0 +1,652 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>GitHub+Hexo建站指南4：写博客、插入多媒体和绑定域名 | HanSir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="HanSir">
+    
+    <meta name="description" content="写博客站点配置好了，我想发表一篇文章，怎么做呢？
+1. 新建md文件在Hexo文件夹下打开Git Bash，输入命令
+1$ hexo new &quot;My New Post&quot; # My New Post 改成你想命的文件名
+这样就在H:\Hexo\source_post文件夹下生成了一个My New Po">
+    
+    
+    
+    
+    <link rel="alternative" href="/atom.xml" title="HanSir" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/H.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/author.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/fu.png" alt="HanSir" title="HanSir"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="HanSir">HanSir</a></h1>
+				<h2 class="blog-motto">to be a better man</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:hansir.net">
+						&nbsp;
+					</form>
+					
+					</li>
+					
+<li> <a title="Click for Fun" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//hansir.qiniudn.com/Hexozhuyinzhuiyue.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>Click for Fun</a>
+</li>
+					
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/11/23/GitHub-Hexo/GitHub-Hexo-4/" title="GitHub+Hexo建站指南4：写博客、插入多媒体和绑定域名" itemprop="url">GitHub+Hexo建站指南4：写博客、插入多媒体和绑定域名</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://hansir.net/about" title="HanSir" target="_blank" itemprop="author">HanSir</a>
+		
+  <p class="article-time">
+    <time datetime="2014-11-23T06:36:58.000Z" itemprop="datePublished"> 发表于 Nov 23 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">1.</span> <span class="toc-text">写博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_新建md文件"><span class="toc-number">1.1.</span> <span class="toc-text">1. 新建md文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_编辑md文件"><span class="toc-number">1.2.</span> <span class="toc-text">2. 编辑md文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_发表，即部署到GitHub"><span class="toc-number">1.3.</span> <span class="toc-text">3. 发表，即部署到GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">1.4.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-number">2.</span> <span class="toc-text">绑定域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_购买域名"><span class="toc-number">2.1.</span> <span class="toc-text">1. 购买域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_绑定域名"><span class="toc-number">2.2.</span> <span class="toc-text">2. 绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_添加CNAME文件"><span class="toc-number">2.3.</span> <span class="toc-text">3. 添加CNAME文件</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="写博客">写博客</h2><p>站点配置好了，我想发表一篇文章，怎么做呢？</p>
+<h3 id="1-_新建md文件">1. 新建md文件</h3><p>在Hexo文件夹下打开Git Bash，输入命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span> <span class="comment"># My New Post 改成你想命的文件名</span></span><br></pre></td></tr></table></figure>
+<p>这样就在H:\Hexo\source_post文件夹下生成了一个My New Post.md的文件。当然，你也可以直接在H:\Hexo\source_post文件夹下直接新建一个My New Post.md。</p>
+<h3 id="2-_编辑md文件">2. 编辑md文件</h3><p>打开新建的md文件，配置开头如下。</p>
+<pre><code><span class="label">title:</span> my new post <span class="preprocessor">#可以改成你新文章的标题，如“GitHub+Hexo建站指南3：写博客和绑定域名”</span>
+<span class="label">date:</span> <span class="number">2008</span>-<span class="number">08</span>-<span class="number">08</span> <span class="number">08</span>:<span class="number">08</span>:<span class="number">08</span> <span class="preprocessor">#发表日期，一般不改动</span>
+<span class="label">categories:</span> blog <span class="preprocessor">#文章文类</span>
+<span class="label">tags:</span> [博客,文章] <span class="preprocessor">#文章标签，多于一项时用这种格式</span>
+---
+<span class="preprocessor">#这里是正文，用markdown写。</span>
+</code></pre><p>markdown的语法和使用方法参照<a href="http://zipperary.com/2013/05/22/introduction-to-markdown/" target="_blank" rel="external">Introduction to markdown</a>。</p>
+<h3 id="3-_发表，即部署到GitHub">3. 发表，即部署到GitHub</h3><p>发布之前，可以在本地预览效果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server <span class="comment"># 访问localhost:4000预览效果。</span></span><br></pre></td></tr></table></figure>
+<p>部署到GitHub</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy <span class="comment"># 同步到github，访问网站看看效果。</span></span><br><span class="line">``` </span><br><span class="line"><span class="comment">## 插入多媒体</span></span><br><span class="line"></span><br><span class="line">怎样在博文中嵌入音乐、视频、flash等多媒体文件？实际上，在hexo中，markdown支持html标签，md文件解析为html时原有的html部分会保留。基于此，我们只要在文中插入符合html规范的代码即可。关于HTML基础语法，自行学习，很简单。</span><br><span class="line"></span><br><span class="line"><span class="comment">### 图片</span></span><br><span class="line"></span><br><span class="line">Markdown语法有关于图片的，格式为</span><br></pre></td></tr></table></figure>
+<pre><code>!<span class="attr_selector">[]</span>(<span class="attribute">http</span>:<span class="comment">//hansir.qiniudn.com/阿里山的小火车.jpg)</span>
+</code></pre><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">效果如下</span><br><span class="line"></span><br><span class="line">![](http://hansir.qiniudn.com/阿里山的小火车.jpg)</span><br><span class="line"></span><br><span class="line">在这里推荐图床，[<span class="link_label">七牛云存储</span>](<span class="link_url">http://www.qiniu.com/</span>)。你可以把你的多媒体文件放在这里，然后在博文中调用即可，节省GitHub空间，而且国内访问更流畅。</span><br><span class="line"></span><br><span class="line"><span class="header">### 音乐</span></span><br><span class="line"></span><br><span class="line">1、转帖</span><br><span class="line"></span><br><span class="line">据我使用发现，主流音乐网站只有[<span class="link_label">虾米音乐</span>](<span class="link_url">http://www.xiami.com/</span>)支持转帖，歌曲页面有个『转帖』选项，将html代码或javascript代码复制到文中即可。</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;embed <span class="variable">src=</span><span class="string">"http://www.xiami.com/widget/0_1770598170/singlePlayer.swf"</span> <span class="variable">type=</span><span class="string">"application/x-shockwave-flash"</span> <span class="variable">width=</span><span class="string">"257"</span> <span class="variable">height=</span><span class="string">"33"</span> <span class="variable">wmode=</span><span class="string">"transparent"</span>&gt;&lt;/embed&gt;
+</code></pre><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">效果如下</span><br><span class="line"></span><br><span class="line">&lt;embed <span class="variable">src=</span><span class="string">"http://www.xiami.com/widget/0_1770598170/singlePlayer.swf"</span> <span class="variable">type=</span><span class="string">"application/x-shockwave-flash"</span> <span class="variable">width=</span><span class="string">"257"</span> <span class="variable">height=</span><span class="string">"33"</span> <span class="variable">wmode=</span><span class="string">"transparent"</span>&gt;&lt;/embed&gt;</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、引用云存储</span><br><span class="line"></span><br><span class="line">HTML代码如下</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;embed <span class="variable">autostart=</span><span class="string">"false"</span> <span class="variable">hidden=</span><span class="string">"false"</span> <span class="variable">loop=</span>-<span class="number">1</span> <span class="variable">src=</span><span class="string">"http://hansir.qiniudn.com/HexoTake That - When We Were Young.mp3"</span>&gt;&lt;/embed&gt;
+</code></pre><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">效果如下</span><br><span class="line"></span><br><span class="line">&lt;embed <span class="variable">autostart=</span><span class="constant">false</span> <span class="variable">hidden=</span><span class="string">"false"</span> <span class="variable">src=</span><span class="string">"http://hansir.qiniudn.com/HexoTake That - When We Were Young.mp3"</span>&gt;&lt;/embed&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">### 视频</span></span><br><span class="line"></span><br><span class="line">嵌入视频的方法和音乐类似，视频网站每个视频页面都会有一个『分享』或『转帖』按钮，点击可以查看代码。</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;embed <span class="variable">src=</span><span class="string">"http://player.video.qiyi.com/29be41c4929e2a8e4861af9a3a90d5f3/0/0/v_19rrh8ecnc.swf-albumId=200055401-tvId=206697700-isPurchase=0-cnId=12"</span> <span class="variable">allowFullScreen=</span><span class="string">"true"</span> <span class="variable">quality=</span><span class="string">"high"</span> <span class="variable">width=</span><span class="string">"480"</span> <span class="variable">height=</span><span class="string">"350"</span> <span class="variable">align=</span><span class="string">"middle"</span> <span class="variable">allowScriptAccess=</span><span class="string">"always"</span> <span class="variable">type=</span><span class="string">"application/x-shockwave-flash"</span>&gt;&lt;/embed&gt;
+</code></pre><p>```</p>
+<p>效果如下</p>
+<embed src="http://player.video.qiyi.com/29be41c4929e2a8e4861af9a3a90d5f3/0/0/v_19rrh8ecnc.swf-albumId=200055401-tvId=206697700-isPurchase=0-cnId=12" allowfullscreen="true" quality="high" width="480" height="350" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+
+<h3 id="说明">说明</h3><p>对于有些音乐、视频找不到『转帖』按钮的，可以查看源代码，找到相应的代码块贴在文中。若找不到，说明该文件的确不能放在自己文中了。</p>
+<h2 id="绑定域名">绑定域名</h2><h3 id="1-_购买域名">1. 购买域名</h3><p>在大陆地区，推荐到万网或者新网购买域名，第一年价格一般不高于50元。推荐.com、.net、.me的域名来做个人博客，常见而且便于记忆。</p>
+<h3 id="2-_绑定域名">2. 绑定域名</h3><p>在域名管理界面设置域名解析，有2种方式供选择</p>
+<blockquote>
+<ol>
+<li>增加CNAME记录：在万网域名解析设置填写如下<br><img src="http://hansir.qiniudn.com/HexoCNAME.jpg" alt=""><br>其中iamhankai.github.io改成你自己的博客地址。</li>
+<li>增加A记录： 在万网域名解析设置填写如下<br><img src="http://hansir.qiniudn.com/HexoARecord.jpg" alt=""><br>其中A的两条记录指向的ip地址是github Pages的提供的ip，这两个ip不是永久不变的，需要你到<a href="https://help.github.com/articles/my-custom-domain-isn-t-working/" target="_blank" rel="external">GitHub Pages</a>查看最新的ip。如果有一天博客不能登录，就有可能是github更改了空间服务的ip地址，记得及时到在<a href="https://help.github.com/articles/my-custom-domain-isn-t-working/" target="_blank" rel="external">GitHub Pages</a>查看最新的ip即可。</li>
+</ol>
+</blockquote>
+<h3 id="3-_添加CNAME文件">3. 添加CNAME文件</h3><p>接下来需要去自己的网站进行域名设置。对于hexo，进入source文件夹，创建名为CNAME的文件，编辑：</p>
+<pre><code>hansir.<span class="winutils">net</span>
+</code></pre><p>你要改成你购买的域名，文件名保存为CNAME。你也可以使用www域名如 www.hansir.net 或者子域名如 blog.hansir.net 。<br>设置之后，部署到GitHub，你就可以通过自己的域名访问你的博客啦。不过要注意域名设置后，需要一段时间在才能生效，不要急，等待域名解析生效就好了。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/GitHub/">GitHub</a><a href="/tags/Hexo/">Hexo</a><a href="/tags/博客/">博客</a><a href="/tags/建站/">建站</a>
+  </div>
+
+</div>
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://hansir.net/2014/11/23/GitHub-Hexo/GitHub-Hexo-4/" data-title="GitHub+Hexo建站指南4：写博客、插入多媒体和绑定域名 | HanSir" data-tsina="2650480414" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/11/27/Think-in-Deep/take-advantage-of-young/" title="趁我们年少轻狂">
+  <strong>上一篇：</strong><br/>
+  <span>
+  趁我们年少轻狂</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/11/22/GitHub-Hexo/GitHub-Hexo-3/"  title="GitHub+Hexo建站指南3：修改主题">
+ <strong>下一篇：</strong><br/> 
+ <span>GitHub+Hexo建站指南3：修改主题
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+
+<section class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">1.</span> <span class="toc-text">写博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_新建md文件"><span class="toc-number">1.1.</span> <span class="toc-text">1. 新建md文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_编辑md文件"><span class="toc-number">1.2.</span> <span class="toc-text">2. 编辑md文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_发表，即部署到GitHub"><span class="toc-number">1.3.</span> <span class="toc-text">3. 发表，即部署到GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">1.4.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-number">2.</span> <span class="toc-text">绑定域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_购买域名"><span class="toc-number">2.1.</span> <span class="toc-text">1. 购买域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_绑定域名"><span class="toc-number">2.2.</span> <span class="toc-text">2. 绑定域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-_添加CNAME文件"><span class="toc-number">2.3.</span> <span class="toc-text">3. 添加CNAME文件</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/Apple-of-Your-Eye/" title="Apple of Your Eye">Apple of Your Eye<sup>0</sup></a></li>
+		
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>4</sup></a></li>
+		
+			<li><a href="/categories/Machine-Learning/" title="Machine Learning">Machine Learning<sup>3</sup></a></li>
+		
+			<li><a href="/categories/Python/" title="Python">Python<sup>3</sup></a></li>
+		
+			<li><a href="/categories/test/" title="test">test<sup>1</sup></a></li>
+		
+			<li><a href="/categories/数据结构/" title="数据结构">数据结构<sup>4</sup></a></li>
+		
+			<li><a href="/categories/杂技/" title="杂技">杂技<sup>2</sup></a></li>
+		
+			<li><a href="/categories/杂谈/" title="杂谈">杂谈<sup>3</sup></a></li>
+		
+			<li><a href="/categories/极客谈/" title="极客谈">极客谈<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 16px;">C++</a><a href="/tags/GitHub/" style="font-size: 16px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/MOOC/" style="font-size: 16px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 14px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 10px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/博客/" style="font-size: 18px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 18px;">建站</a><a href="/tags/数据结构/" style="font-size: 16px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12px;">青春</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            <a href="http://blog.sina.com.cn/s/articlelist_2650480414_1_1.html" target="_blank" title="《一舍笔记》">《一舍笔记》</a>
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2650480414&verifier=7e9eea32&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I&#39;m HanSir in Zhejiang Univ. <br/>
+			This is my blog, just enjoy it.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/kaihana" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="http://www.zhihu.com/people/hankai" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		<a href="http://my.hupu.com/hand_some" target="_blank" class="icon-soccer" title="虎扑足球"></a>
+		
+		
+		<a href="https://github.com/iamhankai" target="_blank" class="icon-github" title="GitHub"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
+		
+		<a href="http://hansir.net/about" target="_blank" title="HanSir">HanSir</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"hansir"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56822152-1', 'hansir.net');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0f306e9fa8923ed1e83e8ce9a1eb33ea' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+  </body>
+</html>
