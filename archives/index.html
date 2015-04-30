@@ -9,8 +9,19 @@
     
     <meta name="author" content="HanSir">
     
+
     
-    
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HanSir">
+<meta property="og:url" content="http://hansir.net/archives/index.html">
+<meta property="og:site_name" content="HanSir">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HanSir">
+<meta name="twitter:description">
+<meta name="twitter:creator" content="@iamhansir">
+
     
     <link rel="alternative" href="/atom.xml" title="HanSir" type="application/atom+xml">
     
@@ -41,7 +52,7 @@
 			<nav class="animated">
 				<ul>
 					<ul>
-					
+					 
 						<li><a href="/">首页</a></li>
 					
 						<li><a href="/archives">归档</a></li>
@@ -52,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:hansir.net">
 						&nbsp;
 					</form>
@@ -209,7 +220,7 @@
 		}
 	}
 })()    '>Click for Fun</a>
-</li>
+</li>					
 					
 				</ul>
 			</nav>			
@@ -386,30 +397,37 @@
 		<a href="http://weibo.com/kaihana" target="_blank" class="icon-weibo" title="微博"></a>
 		
 		
-		<a href="http://www.zhihu.com/people/hankai" target="_blank" class="icon-zhihu" title="知乎"></a>
+		<a href="https://github.com/iamhankai" target="_blank" class="icon-github" title="github"></a>
 		
 		
-		<a href="http://my.hupu.com/hand_some" target="_blank" class="icon-soccer" title="虎扑足球"></a>
 		
-		
-		<a href="https://github.com/iamhankai" target="_blank" class="icon-github" title="GitHub"></a>
+		<a href="https://twitter.com/iamhansir" target="_blank" class="icon-twitter" title="twitter"></a>
 		
 		
 		
 		
 		
+		<a href="https://www.zhihu.com/people/hankai" target="_blank" class="icon-zhihu" title="知乎"></a>
 		
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
 		
 		<a href="http://hansir.net/about" target="_blank" title="HanSir">HanSir</a>
+		
 		
 		</p>
 </div>
 </footer>
       <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -427,18 +445,6 @@ $(document).ready(function(){
       a = $('#asidepart'),
       c = $('.closeaside'),
       o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
   c.click(function(){
     a.addClass('fadeOut').css('display', 'none');
     o.css('display', 'block').addClass('fadeIn');
@@ -452,8 +458,35 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
 });
 </script>
+
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"hansir"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
 
 
 
@@ -499,6 +532,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 
 
 <!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
 
     </body>
    </html>
