@@ -4,32 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Spark简介 | HanSir</title>
+    <title>哭与不哭 | HanSir</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="HanSir">
     
 
     
-    <meta name="description" content="本文内容整合来源于网络，Spark技术在快速发展，说不定一段时间以后这些内容都已经过时了，所以看其基本概念和本质即可，不必深究。截至目前，Spark 1.1.1已经发布了，而一年前还是Spark 0.8。
-官方介绍Spark官网对Spark的定义是
-
-Apache Spark™ is a fast and general engine for large-scale data processing">
+    <meta name="description" content="韩铯钼他从小就爱哭，脸皮特别薄。 
+二年级的时候，韩铯钼座位在过道旁边，他最爱上数学课，因为任课老师是个漂亮女青年。一次数学课上，隔壁班女老师找他们老师说事。说完了从中间过道回去，韩铯钼的腿就直直地伸在那里，好像一根木头横在过道上。隔壁老师走到这里跨了很大一步，几乎是跳了过去。就当这位老师在半空中的时候，韩铯钼意识到自己碍事了，把腿缩了回去。这一缩不要紧，让隔壁老师感觉自己是故意绊她的就要紧了。这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spark简介">
-<meta property="og:url" content="http://hansir.net/2014/12/04/Geek-Talk/Spark/index.html">
+<meta property="og:title" content="哭与不哭">
+<meta property="og:url" content="http://hansir.net/2015/04/22/Think-in-Deep/cry-or-not/index.html">
 <meta property="og:site_name" content="HanSir">
-<meta property="og:description" content="本文内容整合来源于网络，Spark技术在快速发展，说不定一段时间以后这些内容都已经过时了，所以看其基本概念和本质即可，不必深究。截至目前，Spark 1.1.1已经发布了，而一年前还是Spark 0.8。
-官方介绍Spark官网对Spark的定义是
-
-Apache Spark™ is a fast and general engine for large-scale data processing">
-<meta property="og:image" content="http://hansir.qiniudn.com/Sparkspark-framwork.jpg">
+<meta property="og:description" content="韩铯钼他从小就爱哭，脸皮特别薄。 
+二年级的时候，韩铯钼座位在过道旁边，他最爱上数学课，因为任课老师是个漂亮女青年。一次数学课上，隔壁班女老师找他们老师说事。说完了从中间过道回去，韩铯钼的腿就直直地伸在那里，好像一根木头横在过道上。隔壁老师走到这里跨了很大一步，几乎是跳了过去。就当这位老师在半空中的时候，韩铯钼意识到自己碍事了，把腿缩了回去。这一缩不要紧，让隔壁老师感觉自己是故意绊她的就要紧了。这">
+<meta property="og:image" content="http://cdn.duitang.com/uploads/item/201409/12/20140912205721_SUdKM.thumb.700_0.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spark简介">
-<meta name="twitter:description" content="本文内容整合来源于网络，Spark技术在快速发展，说不定一段时间以后这些内容都已经过时了，所以看其基本概念和本质即可，不必深究。截至目前，Spark 1.1.1已经发布了，而一年前还是Spark 0.8。
-官方介绍Spark官网对Spark的定义是
-
-Apache Spark™ is a fast and general engine for large-scale data processing">
+<meta name="twitter:title" content="哭与不哭">
+<meta name="twitter:description" content="韩铯钼他从小就爱哭，脸皮特别薄。 
+二年级的时候，韩铯钼座位在过道旁边，他最爱上数学课，因为任课老师是个漂亮女青年。一次数学课上，隔壁班女老师找他们老师说事。说完了从中间过道回去，韩铯钼的腿就直直地伸在那里，好像一根木头横在过道上。隔壁老师走到这里跨了很大一步，几乎是跳了过去。就当这位老师在半空中的时候，韩铯钼意识到自己碍事了，把腿缩了回去。这一缩不要紧，让隔壁老师感觉自己是故意绊她的就要紧了。这">
 <meta name="twitter:creator" content="@iamhansir">
 
     
@@ -243,71 +237,27 @@ Apache Spark™ is a fast and general engine for large-scale data processing">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/04/Geek-Talk/Spark/" title="Spark简介" itemprop="url">Spark简介</a>
+      <a href="/2015/04/22/Think-in-Deep/cry-or-not/" title="哭与不哭" itemprop="url">哭与不哭</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://hansir.net/about" title="HanSir" target="_blank" itemprop="author">HanSir</a>
 		
   <p class="article-time">
-    <time datetime="2014-12-04T06:20:58.000Z" itemprop="datePublished"> 发表于 Dec 4 2014</time>
+    <time datetime="2015-04-22T13:43:32.000Z" itemprop="datePublished"> 发表于 Apr 22 2015</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#官方介绍"><span class="toc-number">1.</span> <span class="toc-text">官方介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark是什么"><span class="toc-number">2.</span> <span class="toc-text">Spark是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#与Hadoop比较"><span class="toc-number">3.</span> <span class="toc-text">与Hadoop比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark与Hadoop的结合"><span class="toc-number">4.</span> <span class="toc-text">Spark与Hadoop的结合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark的适用场景"><span class="toc-number">5.</span> <span class="toc-text">Spark的适用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行模式"><span class="toc-number">6.</span> <span class="toc-text">运行模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark生态系统"><span class="toc-number">7.</span> <span class="toc-text">Spark生态系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#业界的使用"><span class="toc-number">8.</span> <span class="toc-text">业界的使用</span></a></li></ol>
-		
-		</div>
-		
-		<p>本文内容整合来源于网络，Spark技术在快速发展，说不定一段时间以后这些内容都已经过时了，所以看其基本概念和本质即可，不必深究。截至目前，Spark 1.1.1已经发布了，而一年前还是Spark 0.8。</p>
-<h3 id="官方介绍">官方介绍</h3><p><a href="http://spark.apache.org/" target="_blank" rel="external">Spark</a>官网对Spark的定义是</p>
-<blockquote>
-<p>Apache Spark™ is a fast and general engine for large-scale data processing.<br>Apache Spark™是一个适用于大规模数据处理的快速通用引擎。</p>
-</blockquote>
-<p>对于Spark的优势，官网也给出了4点：</p>
-<blockquote>
-<p><strong>1. Speed</strong><br>Run programs up to 100x faster than Hadoop MapReduce in memory, or 10x faster on disk.<br><strong>1. 速度</strong><br>在内存中跑程序的速度比Hadoop MapReduce快100多倍，在硬盘中快10多倍。</p>
-<p><strong>2. Ease of Use</strong><br>Write applications quickly in Java, Scala or Python.<br><strong>2. 易用性</strong><br>可以用Java、Scala或Python快速编写应用。</p>
-<p><strong>3. Generality</strong><br>Combine SQL, streaming, and complex analytics.<br><strong>3. 通用性</strong><br>融合了SQL、流和复杂分析。</p>
-<p><strong>4.Runs Everywhere</strong><br>Spark runs on Hadoop, Mesos, standalone, or in the cloud. It can access diverse data sources including HDFS, Cassandra, HBase, S3.<br><strong>4. 运行无处不在</strong><br>Spark运行在Hadoop、Mesos、单机和云端上。它可以获取不同的数据源，包括HDFS、Cassandra、HBase、S3。</p>
-</blockquote>
-<h3 id="Spark是什么">Spark是什么</h3><p>Spark是UC Berkeley AMP lab所开源的类Hadoop MapReduce的通用的并行计算框架，Spark基于map reduce算法实现的分布式计算，拥有Hadoop MapReduce所具有的优点；但不同于MapReduce的是Job中间输出和结果可以保存在内存中，从而不再需要读写HDFS，因此Spark能更好地适用于数据挖掘与机器学习等需要迭代的map reduce的算法。其架构如下图所示：</p>
-<p><img src="http://hansir.qiniudn.com/Sparkspark-framwork.jpg" alt=""></p>
-<h3 id="与Hadoop比较">与Hadoop比较</h3><ul>
-<li><p>Spark的中间数据放到内存中，对于迭代运算效率更高。</p>
-<blockquote>
-<p>Spark更适合于迭代运算比较多的ML和DM运算。因为在Spark里面，有RDD的抽象概念。</p>
-</blockquote>
-</li>
-<li><p>Spark比Hadoop更通用。</p>
-<blockquote>
-<p>Spark提供的数据集操作类型有很多种，不像Hadoop只提供了Map和Reduce两种操作。比如map, filter, flatMap, sample, groupByKey, reduceByKey, union, join, cogroup, mapValues, sort,partionBy等多种操作类型，Spark把这些操作称为Transformations。同时还提供Count, collect, reduce, lookup, save等多种actions操作。<br>这些多种多样的数据集操作类型，给给开发上层应用的用户提供了方便。各个处理节点之间的通信模型不再像Hadoop那样就是唯一的Data Shuffle一种模式。用户可以命名，物化，控制中间结果的存储、分区等。可以说编程模型比Hadoop更灵活。<br>不过由于RDD的特性，Spark不适用那种异步细粒度更新状态的应用，例如web服务的存储或者是增量的web爬虫和索引。就是对于那种增量修改的应用模型不适合。</p>
-</blockquote>
-</li>
-<li><p>容错性。</p>
-<blockquote>
-<p>在分布式数据集计算时通过checkpoint来实现容错，而checkpoint有两种方式，一个是checkpoint data，一个是logging the updates。用户可以控制采用哪种方式来实现容错。</p>
-</blockquote>
-</li>
-<li><p>可用性。</p>
-<blockquote>
-<p>Spark通过提供丰富的Scala, Java，Python API及交互式Shell来提高可用性。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="Spark与Hadoop的结合">Spark与Hadoop的结合</h3><p>Spark可以直接对HDFS进行数据的读写，同样支持Spark on YARN。Spark可以与MapReduce运行于同集群中，共享存储资源与计算，数据仓库Shark实现上借用Hive，几乎与Hive完全兼容。</p>
-<h3 id="Spark的适用场景">Spark的适用场景</h3><p>Spark是基于内存的迭代计算框架，适用于需要多次操作特定数据集的应用场合。需要反复操作的次数越多，所需读取的数据量越大，受益越大，数据量小但是计算密集度较大的场合，受益就相对较小。<br>由于RDD的特性，Spark不适用那种异步细粒度更新状态的应用，例如web服务的存储或者是增量的web爬虫和索引。就是对于那种增量修改的应用模型不适合。<br>总的来说Spark的适用面比较广泛且比较通用。</p>
-<h3 id="运行模式">运行模式</h3><p>本地模式<br>Standalone模式<br>Mesoes模式<br>yarn模式  </p>
-<h3 id="Spark生态系统">Spark生态系统</h3><p>Shark ( Hive on Spark): Shark基本上就是在Spark的框架基础上提供和Hive一样的HiveQL命令接口，为了最大程度的保持和Hive的兼容性，Shark使用了Hive的API来实现query Parsing和 Logic Plan generation，最后的PhysicalPlan execution阶段用Spark代替Hadoop MapReduce。通过配置Shark参数，Shark可以自动在内存中缓存特定的RDD，实现数据重用，进而加快特定数据集的检索。同时，Shark通过UDF用户自定义函数实现特定的数据分析学习算法，使得SQL数据查询和运算分析能结合在一起，最大化RDD的重复使用。</p>
-<p>Spark streaming: 构建在Spark上处理Stream数据的框架，基本的原理是将Stream数据分成小的时间片断（几秒），以类似batch批量处理的方式来处理这小部分数据。Spark Streaming构建在Spark上，一方面是因为Spark的低延迟执行引擎（100ms+）可以用于实时计算，另一方面相比基于Record的其它处理框架（如Storm），RDD数据集更容易做高效的容错处理。此外小批量处理的方式使得它可以同时兼容批量和实时数据处理的逻辑和算法。方便了一些需要历史数据和实时数据联合分析的特定应用场合。</p>
-<p>Bagel: Pregel on Spark，可以用Spark进行图计算，这是个非常有用的小项目。Bagel自带了一个例子，实现了Google的PageRank算法。</p>
-<h3 id="业界的使用">业界的使用</h3><p>Spark在业界使用广泛，众多公司和组织在使用，其中不乏Berkeley、Princeton、NASA、Amazon、eBay、IBM、Yahoo!、Nokia、Samsung、阿里巴巴、百度、腾讯、网易、搜狐等知名公司或组织，详情可见<a href="https://cwiki.apache.org/confluence/display/SPARK/Powered+By+Spark" target="_blank" rel="external">链接</a>。</p>
-<hr>
-<p>参考资料：<br><a href="http://tech.uc.cn/?p=2116" target="_blank" rel="external">http://tech.uc.cn/?p=2116</a></p>
+		<p>韩铯钼他从小就爱哭，脸皮特别薄。 </p>
+<p>二年级的时候，韩铯钼座位在过道旁边，他最爱上数学课，因为任课老师是个漂亮女青年。一次数学课上，隔壁班女老师找他们老师说事。说完了从中间过道回去，韩铯钼的腿就直直地伸在那里，好像一根木头横在过道上。隔壁老师走到这里跨了很大一步，几乎是跳了过去。就当这位老师在半空中的时候，韩铯钼意识到自己碍事了，把腿缩了回去。这一缩不要紧，让隔壁老师感觉自己是故意绊她的就要紧了。这位老师跨过之后，转过身来轻轻捏了一下韩铯钼的小脸，“假装愤怒的”眼镜瞪着韩铯钼说：“你个小屁孩还会绊老师啊！”然后就径直走了出去。韩铯钼愣了一下，感觉自己在数学老师面前出了丑，“呜呜呜……”哭了起来，泪水止不住地淌，看起来是那么伤心。旁边的同学对此手足无措地看着他，全班同学的眼光让韩铯钼更加感觉好丢人，哭的更厉害了。数学老师走了过来开导他：“韩铯钼，别哭了，我们都知道你不是故意的，是不是，同学们？”同学们异口同声：“是……”</p>
+<p>因为爱哭，韩铯钼心里对自己说这不行，男儿有泪不轻弹。随着年级越来越高，韩铯钼哭的次数越来越少。在不断的学习生活中成了像钱学森说的那样，不太会表达感情的理性人。</p>
+<p>初中的时候，韩铯钼的姥爷去世了。韩铯钼得知这个消息后心里的失落涌动着，好像少了什么东西，却没有任何想哭的情绪。他想起了上次见到姥爷的时候，姥爷身体已经很差了，虽然还能走动，但双腿浮肿的厉害。韩铯钼母亲蹲下来抚看姥爷浮肿的腿，难受的心情已经写在脸上。后来不久姥爷就走了。现在姥爷的房子也已经拆了，成了一小片杨树林，每次经过这里，韩铯钼的母亲还是忍不住鼻子一酸，泪流双行。这种感情，现在的韩铯钼绝对难以体会，因为他不懂的珍惜和姥爷在一起的时光，他心里对姥爷的感情太少了。</p>
+<p>高中的时候，韩铯钼大部分时间都在学校度过，很多事情都是后知后觉。他老爷（河南方言，曾祖父）去世的消息他有一次周末回家才知道。出殡韩铯钼也没赶上，就因为他在上学，家里人通知他回来。现在好多家长对于孩子，认为上学大于一切，这让他们得到知识的同时丧失了很多学校给不了的东西。因为上学忙了，韩铯钼见老爷的次数越来越少了，小时候在老爷家玩麻将的日子已经模糊不清了。最后一次见老爷还是在暑假，在爷爷家的床上，老爷坐在那里，精力极差，连眼睛都懒得睁开。家人在旁边说话，老爷也无力对话。韩铯钼感觉到老爷已经九十岁，这次是真的不行了，因为从未拄过拐杖的他突然就连床都离不开了。那天韩铯钼和老爷没有交流，从此再也没机会和他说上一句话了。老爷的去世也没让韩铯钼有想哭的冲动，怕是没有感情付出太久的习惯性。</p>
+<p>韩铯钼的故事讲完了，而韩铯钼的状态可能很多人都存在，特别是年轻人，不知道为了什么，却像机器一样运行着。</p>
+<p>麻木冷漠是鲁迅给当时国人贴的标签，在现在这个风云变幻、物欲横流的时代，又何尝不是这样呢！公益广告一直在倡导多陪陪家人，真正能做到的又有多少人呢？不仅仅是对家人对朋友的感情，相亲节目的火爆又反映了忙碌的年轻人等到用时才想起来自己的爱情也没有付出过。是理性杀死了我们的感情吗？可我又想不起更合理的原因。</p>
+<p><img src="http://cdn.duitang.com/uploads/item/201409/12/20140912205721_SUdKM.thumb.700_0.png" class="img-center"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -315,13 +265,13 @@ Apache Spark™ is a fast and general engine for large-scale data processing">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/极客谈/">极客谈</a>
+  <a class="article-category-link" href="/categories/杂谈/">杂谈</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hadoop/">Hadoop</a><a href="/tags/Spark/">Spark</a><a href="/tags/大数据/">大数据</a>
+  <span></span> <a href="/tags/感性/">感性</a><a href="/tags/理性/">理性</a>
   </div>
 
 </div>
@@ -330,7 +280,7 @@ Apache Spark™ is a fast and general engine for large-scale data processing">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://hansir.net/2014/12/04/Geek-Talk/Spark/" data-title="Spark简介 | HanSir" data-tsina="2650480414" class="share clearfix">
+	  <div data-url="http://hansir.net/2015/04/22/Think-in-Deep/cry-or-not/" data-title="哭与不哭 | HanSir" data-tsina="2650480414" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -343,19 +293,11 @@ Apache Spark™ is a fast and general engine for large-scale data processing">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/12/08/Varied-Tech/LaTeX1/" title="LaTeX指南1——TeXstudio的安装与使用">
-  <strong>上一篇：</strong><br/>
-  <span>
-  LaTeX指南1——TeXstudio的安装与使用</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/11/27/Think-in-Deep/take-advantage-of-young/"  title="趁我们年少轻狂">
+<a href="/2015/03/06/Python/Why-Python/"  title="【翻译】为什么数据科学家选择了Python">
  <strong>下一篇：</strong><br/> 
- <span>趁我们年少轻狂
+ <span>【翻译】为什么数据科学家选择了Python
 </span>
 </a>
 </div>
@@ -364,19 +306,12 @@ Apache Spark™ is a fast and general engine for large-scale data processing">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2014/12/04/Geek-Talk/Spark/" data-title="Spark简介" data-url="http://hansir.net/2014/12/04/Geek-Talk/Spark/"></div>
+	<div class="ds-thread" data-thread-key="2015/04/22/Think-in-Deep/cry-or-not/" data-title="哭与不哭" data-url="http://hansir.net/2015/04/22/Think-in-Deep/cry-or-not/"></div>
 </section>
 
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#官方介绍"><span class="toc-number">1.</span> <span class="toc-text">官方介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark是什么"><span class="toc-number">2.</span> <span class="toc-text">Spark是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#与Hadoop比较"><span class="toc-number">3.</span> <span class="toc-text">与Hadoop比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark与Hadoop的结合"><span class="toc-number">4.</span> <span class="toc-text">Spark与Hadoop的结合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark的适用场景"><span class="toc-number">5.</span> <span class="toc-text">Spark的适用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行模式"><span class="toc-number">6.</span> <span class="toc-text">运行模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spark生态系统"><span class="toc-number">7.</span> <span class="toc-text">Spark生态系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#业界的使用"><span class="toc-number">8.</span> <span class="toc-text">业界的使用</span></a></li></ol>
- 
-  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -554,8 +489,6 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
-      
-      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
