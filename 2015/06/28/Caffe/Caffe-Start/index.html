@@ -12,23 +12,23 @@
 
     
     <meta name="description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
-假设你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
-下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见安装指导
-跑个例子官方Ca">
+Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
+下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见官方安装指导
+跑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Caffe入门指导">
 <meta property="og:url" content="http://hansir.net/2015/06/28/Caffe/Caffe-Start/index.html">
 <meta property="og:site_name" content="HanSir">
 <meta property="og:description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
-假设你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
-下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见安装指导
-跑个例子官方Ca">
+Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
+下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见官方安装指导
+跑">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Caffe入门指导">
 <meta name="twitter:description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
-假设你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
-下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见安装指导
-跑个例子官方Ca">
+Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
+下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见官方安装指导
+跑">
 <meta name="twitter:creator" content="@iamhansir">
 
     
@@ -260,9 +260,9 @@
 		
 		</div>
 		
-		<h3 id="说明">说明</h3><p>Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。<br>这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。</p>
-<p>假设你有深度学习的基础，新手的话强推斯坦福的<a href="http://deeplearning.stanford.edu/tutorial/" target="_blank" rel="external">UFLDL教程</a>，以及<a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank" rel="external">中文版</a>。</p>
-<h3 id="下载与安装">下载与安装</h3><p>可以到Github上下载<a href="https://github.com/BVLC/caffe" target="_blank" rel="external">最新版</a>。<br>Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="external">安装指导</a></p>
+		<h3 id="说明">说明</h3><p><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a>是大神<a href="http://daggerfs.com" target="_blank" rel="external">贾扬清</a>在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。<br>这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。</p>
+<p>Caffe需要你有深度学习的基础，新手的话强推斯坦福的<a href="http://deeplearning.stanford.edu/tutorial/" target="_blank" rel="external">UFLDL教程</a>，以及<a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank" rel="external">中文版</a>。</p>
+<h3 id="下载与安装">下载与安装</h3><p>可以到Github上下载<a href="https://github.com/BVLC/caffe" target="_blank" rel="external">最新版</a>。<br>Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="external">官方安装指导</a></p>
 <h3 id="跑个例子">跑个例子</h3><p>官方Caffe中已经包含了一些model和example，最简单的就是<a href="http://caffe.berkeleyvision.org/gathered/examples/mnist.html" target="_blank" rel="external">MNIST手写数字识别</a>，按照该教程跑一遍，你就知道Caffe做深度学习的大致流程了。<br>MNIST使用的是经典的卷积神经网络——LeNet，它由深度学习大牛 Yann Lecun 提出，推荐拜读原论文<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf" target="_blank" rel="external">Gradient-based learning applied to document recognition</a>。<br>更现代化的卷积神经网络是2012年跨越式提升ImageNet识别率而震惊学界的AlexNet，强烈推荐读一读原论文<a href="http://www.cs.toronto.edu/~hinton/absps/imagenet.pdf" target="_blank" rel="external">ImageNet Classification with Deep Convolutional Neural Networks</a>，对于理解CNN在图像领域的应用大有裨益。</p>
   
 	</div>
