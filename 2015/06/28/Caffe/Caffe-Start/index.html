@@ -11,7 +11,7 @@
     
 
     
-    <meta name="description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
+    <meta name="description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到广泛应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
 Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
 下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见官方安装指导
 跑">
@@ -19,13 +19,13 @@ Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教�
 <meta property="og:title" content="Caffe入门指导">
 <meta property="og:url" content="http://hansir.net/2015/06/28/Caffe/Caffe-Start/index.html">
 <meta property="og:site_name" content="HanSir">
-<meta property="og:description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
+<meta property="og:description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到广泛应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
 Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
 下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见官方安装指导
 跑">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Caffe入门指导">
-<meta name="twitter:description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
+<meta name="twitter:description" content="说明Caffe是大神贾扬清在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到广泛应用。这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。
 Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教程，以及中文版。
 下载与安装可以到Github上下载最新版。Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见官方安装指导
 跑">
@@ -260,7 +260,7 @@ Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教�
 		
 		</div>
 		
-		<h3 id="说明">说明</h3><p><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a>是大神<a href="http://daggerfs.com" target="_blank" rel="external">贾扬清</a>在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到普遍应用。<br>这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。</p>
+		<h3 id="说明">说明</h3><p><a href="http://caffe.berkeleyvision.org/" target="_blank" rel="external">Caffe</a>是大神<a href="http://daggerfs.com" target="_blank" rel="external">贾扬清</a>在加州伯克利大学博士期间开发的深度学习框架，在学界和工业界得到广泛应用。<br>这份指导不会一步一步地演示，这只会把网上繁杂的资料进行梳理，给大家一个引导线。</p>
 <p>Caffe需要你有深度学习的基础，新手的话强推斯坦福的<a href="http://deeplearning.stanford.edu/tutorial/" target="_blank" rel="external">UFLDL教程</a>，以及<a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank" rel="external">中文版</a>。</p>
 <h3 id="下载与安装">下载与安装</h3><p>可以到Github上下载<a href="https://github.com/BVLC/caffe" target="_blank" rel="external">最新版</a>。<br>Caffe官方支持Linux和OSX等平台，它依赖很多库，所以安装稍微麻烦，详见<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="external">官方安装指导</a></p>
 <h3 id="跑个例子">跑个例子</h3><p>官方Caffe中已经包含了一些model和example，最简单的就是<a href="http://caffe.berkeleyvision.org/gathered/examples/mnist.html" target="_blank" rel="external">MNIST手写数字识别</a>，按照该教程跑一遍，你就知道Caffe做深度学习的大致流程了。<br>MNIST使用的是经典的卷积神经网络——LeNet，它由深度学习大牛 Yann Lecun 提出，推荐拜读原论文<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf" target="_blank" rel="external">Gradient-based learning applied to document recognition</a>。<br>更现代化的卷积神经网络是2012年跨越式提升ImageNet识别率而震惊学界的AlexNet，强烈推荐读一读原论文<a href="http://www.cs.toronto.edu/~hinton/absps/imagenet.pdf" target="_blank" rel="external">ImageNet Classification with Deep Convolutional Neural Networks</a>，对于理解CNN在图像领域的应用大有裨益。</p>
@@ -299,6 +299,14 @@ Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教�
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2015/07/27/Machine-Learning/LIBSVM-Python/" title="Python使用LIBSVM入门">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Python使用LIBSVM入门</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2015/05/17/to-LiuXiang/"  title="刘翔刘翔你别哭——献给永远的飞人">
@@ -346,7 +354,7 @@ Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教�
 		  
 		
 		  
-			<li><a href="/categories/Machine-Learning/" title="Machine Learning">Machine Learning<sup>3</sup></a></li>
+			<li><a href="/categories/Machine-Learning/" title="Machine Learning">Machine Learning<sup>4</sup></a></li>
 		  
 		
 		  
@@ -381,7 +389,7 @@ Caffe需要你有深度学习的基础，新手的话强推斯坦福的UFLDL教�
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 18px;">C++</a><a href="/tags/Caffe/" style="font-size: 10px;">Caffe</a><a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a><a href="/tags/GitHub/" style="font-size: 16px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/MOOC/" style="font-size: 18px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 14px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 10px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/刘翔/" style="font-size: 10px;">刘翔</a><a href="/tags/博客/" style="font-size: 18px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 18px;">建站</a><a href="/tags/感性/" style="font-size: 10px;">感性</a><a href="/tags/散列/" style="font-size: 10px;">散列</a><a href="/tags/数据结构/" style="font-size: 18px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/理性/" style="font-size: 10px;">理性</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12px;">青春</a>
+       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 17.5px;">C++</a><a href="/tags/Caffe/" style="font-size: 10px;">Caffe</a><a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a><a href="/tags/GitHub/" style="font-size: 15px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a><a href="/tags/LIBSVM/" style="font-size: 10px;">LIBSVM</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/MOOC/" style="font-size: 17.5px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 12.5px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/刘翔/" style="font-size: 10px;">刘翔</a><a href="/tags/博客/" style="font-size: 17.5px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 17.5px;">建站</a><a href="/tags/感性/" style="font-size: 10px;">感性</a><a href="/tags/散列/" style="font-size: 10px;">散列</a><a href="/tags/数据结构/" style="font-size: 17.5px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12.5px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/理性/" style="font-size: 10px;">理性</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12.5px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12.5px;">青春</a>
     </div>
   </div>
 
