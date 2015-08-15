@@ -4,22 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>LaTeX指南1——TeXstudio的安装与使用 | HanKai</title>
+    <title>Linux下C/C++基本开发环境搭建 | HanKai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="HanKai">
     
 
     
-    <meta name="description" content="LaTeX与TeXstudio简介LaTeXLaTeX（音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80年代初期开发，利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。因此它非常适用于生成">
+    <meta name="description" content="重装了系统，在虚拟机上又装了Ubuntu14.04，所有开发环境需要重新搭建，顺便写个教程，以飨入门者，也方便自己以后再重装系统时参考。
+基本开发环境刚装好的系统中已经有GCC了，但是这个GCC什么文件都不能编译，因为没有一些必须的头文件，所以需要安装g++、libc6-dev、linux-libc-dev、libstdc++6-4.1-dev等一些必须的软件和头文件的库。运行下面命令安装buil">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LaTeX指南1——TeXstudio的安装与使用">
-<meta property="og:url" content="http://hankai.xyz/2014/12/08/Varied-Tech/LaTeX1/index.html">
+<meta property="og:title" content="Linux下C/C++基本开发环境搭建">
+<meta property="og:url" content="http://hankai.xyz/2015/07/15/Geek-Tech/Linux-C-Start/index.html">
 <meta property="og:site_name" content="HanKai">
-<meta property="og:description" content="LaTeX与TeXstudio简介LaTeXLaTeX（音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80年代初期开发，利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。因此它非常适用于生成">
+<meta property="og:description" content="重装了系统，在虚拟机上又装了Ubuntu14.04，所有开发环境需要重新搭建，顺便写个教程，以飨入门者，也方便自己以后再重装系统时参考。
+基本开发环境刚装好的系统中已经有GCC了，但是这个GCC什么文件都不能编译，因为没有一些必须的头文件，所以需要安装g++、libc6-dev、linux-libc-dev、libstdc++6-4.1-dev等一些必须的软件和头文件的库。运行下面命令安装buil">
+<meta property="og:image" content="http://7rf2tq.com1.z0.glb.clouddn.com/cmake_helloworld.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LaTeX指南1——TeXstudio的安装与使用">
-<meta name="twitter:description" content="LaTeX与TeXstudio简介LaTeXLaTeX（音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80年代初期开发，利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。因此它非常适用于生成">
+<meta name="twitter:title" content="Linux下C/C++基本开发环境搭建">
+<meta name="twitter:description" content="重装了系统，在虚拟机上又装了Ubuntu14.04，所有开发环境需要重新搭建，顺便写个教程，以飨入门者，也方便自己以后再重装系统时参考。
+基本开发环境刚装好的系统中已经有GCC了，但是这个GCC什么文件都不能编译，因为没有一些必须的头文件，所以需要安装g++、libc6-dev、linux-libc-dev、libstdc++6-4.1-dev等一些必须的软件和头文件的库。运行下面命令安装buil">
 <meta name="twitter:creator" content="@iamhansir">
 
     
@@ -231,14 +235,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/08/Varied-Tech/LaTeX1/" title="LaTeX指南1——TeXstudio的安装与使用" itemprop="url">LaTeX指南1——TeXstudio的安装与使用</a>
+      <a href="/2015/07/15/Geek-Tech/Linux-C-Start/" title="Linux下C/C++基本开发环境搭建" itemprop="url">Linux下C/C++基本开发环境搭建</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://hankai.xyz/about" title="HanKai" target="_blank" itemprop="author">HanKai</a>
 		
   <p class="article-time">
-    <time datetime="2014-12-08T12:13:32.000Z" itemprop="datePublished"> 发表于 Dec 8 2014</time>
+    <time datetime="2015-07-15T14:36:32.000Z" itemprop="datePublished"> 发表于 Jul 15 2015</time>
     
   </p>
 </header>
@@ -247,20 +251,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LaTeX与TeXstudio简介"><span class="toc-number">1.</span> <span class="toc-text">LaTeX与TeXstudio简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LaTeX"><span class="toc-number">1.1.</span> <span class="toc-text">LaTeX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TeXstudio"><span class="toc-number">1.2.</span> <span class="toc-text">TeXstudio</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TeXstudio安装与使用"><span class="toc-number">2.</span> <span class="toc-text">TeXstudio安装与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置TeXstudio和MikTex"><span class="toc-number">2.1.</span> <span class="toc-text">配置TeXstudio和MikTex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#玩一下"><span class="toc-number">2.2.</span> <span class="toc-text">玩一下</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本开发环境"><span class="toc-number">1.</span> <span class="toc-text">基本开发环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake配置"><span class="toc-number">2.</span> <span class="toc-text">CMake配置</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="LaTeX与TeXstudio简介">LaTeX与TeXstudio简介</h2><h3 id="LaTeX">LaTeX</h3><p>LaTeX（音译“拉泰赫”）是一种基于ΤΕΧ的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在20世纪80年代初期开发，利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由TeX所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。因此它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档。</p>
-<h3 id="TeXstudio">TeXstudio</h3><p>LaTeX编辑器有很多种，为什么推荐TeXstudio呢？<br>TeXstudio是一款开源的跨平台LaTeX编辑软件，用户界面与Texmaker类似。作为LaTex的集成开发环境，TeXstudio为用户提供了交互式拼写检查、代码折叠、语法高亮等特性。该软件克隆自Texmaker，起初叫做TexMakerX，它在添加了额外的特性的同时维持了与Texmaker相同的观感。TeXstudio能在Windows、Unix、BSD、Linux以及Mac OS上运行。</p>
-<h2 id="TeXstudio安装与使用">TeXstudio安装与使用</h2><h3 id="配置TeXstudio和MikTex">配置TeXstudio和MikTex</h3><p>注意，TeXstudio是一个LaTeX编辑软件，而非LaTeX的软件实体。正如rstudio和r的关系。因此，先要安装LaTeX软件，之后才能使用TeXstudio。笔者使用MikTex。</p>
-<blockquote>
-<p>MikTex下载链接：<a href="http://miktex.org/" target="_blank" rel="external">http://miktex.org/</a><br>TeXstudio下载链接：<a href="http://texstudio.sourceforge.net/" target="_blank" rel="external">http://texstudio.sourceforge.net/</a></p>
-</blockquote>
-<p>安装后，设置界面为中文界面</p>
-<pre><code><span class="comment">Options</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Configure</span> <span class="comment">TeXstudio</span><span class="literal">-</span><span class="literal">-</span><span class="comment">General</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Language</span><span class="literal">-</span><span class="literal">-</span><span class="comment">zh_CN</span>
-</code></pre><h3 id="玩一下">玩一下</h3><p>新建一个tex文件，在编辑框输入<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\documentclass&#123;article&#125;</span></span><br><span class="line"><span class="string">\begin&#123;document&#125;</span></span><br><span class="line">hello, world</span><br><span class="line"><span class="string">\end&#123;document&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>保存，点击编译按钮，没有错误，再点击构建并查看按钮，即可生成pdf文本，在右侧即可看到生成的pdf预览。</p>
+		<p>重装了系统，在虚拟机上又装了Ubuntu14.04，所有开发环境需要重新搭建，顺便写个教程，以飨入门者，也方便自己以后再重装系统时参考。</p>
+<h2 id="基本开发环境">基本开发环境</h2><p>刚装好的系统中已经有GCC了，但是这个GCC什么文件都不能编译，因为没有一些必须的头文件，所以需要安装g++、libc6-dev、linux-libc-dev、libstdc++6-4.1-dev等一些必须的软件和头文件的库。<br>运行下面命令安装<code>build-essential</code>包就可以一键把这些东西都安装了。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install build-essential</span><br></pre></td></tr></table></figure></p>
+<p>编辑<code>hello.cpp</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;iostream&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"hello world!\n"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在<code>hello.cpp</code>目录下运行如下命令，<code>-o hello1 hello.cpp</code>从<code>hello.cpp</code>编译生成<code>hello1</code>文件，<code>hello1</code>为可执行文件，没有后缀。<br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="comment">o</span> <span class="comment">hello1</span> <span class="comment">hello</span><span class="string">.</span><span class="comment">cpp</span></span><br></pre></td></tr></table></figure></p>
+<p>运行<code>hello1</code><br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hell<span class="preprocessor">o1</span></span><br></pre></td></tr></table></figure></p>
+<p>打印出<code>hello world!</code>，基本开发环境就算配置好了。</p>
+<h2 id="CMake配置">CMake配置</h2><p>CMake用来管理较复杂的工程，点<a href="http://www.cmake.org/cmake/resources/software.html" target="_blank" rel="external">这里</a>下载。<br>解压<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf cmake-<span class="number">3.3</span>.<span class="number">1</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure></p>
+<p>进入目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> cmake-<span class="number">3.3</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>依次执行<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./bootstrap</span><br><span class="line"><span class="built_in">make</span></span><br><span class="line"><span class="built_in">make</span> install</span><br></pre></td></tr></table></figure></p>
+<p>cmake会默认安装在<code>/usr/local/bin</code>下面。<br>那么，cmake安装好了，怎么用它来构建应用程序呢，这个<a href="http://www.ibm.com/developerworks/cn/linux/l-cn-cmake/" target="_blank" rel="external">教程</a>非常详细。</p>
+<p>如果测试出现这样的结果，那就配置成功了。<br><img src="http://7rf2tq.com1.z0.glb.clouddn.com/cmake_helloworld.jpg" alt=""></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -274,7 +279,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/LaTeX/">LaTeX</a><a href="/tags/MikTex/">MikTex</a><a href="/tags/Texstudio/">Texstudio</a>
+  <span></span> <a href="/tags/C-C/">C/C++</a><a href="/tags/CMake/">CMake</a><a href="/tags/Linux/">Linux</a>
   </div>
 
 </div>
@@ -283,7 +288,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://hankai.xyz/2014/12/08/Varied-Tech/LaTeX1/" data-title="LaTeX指南1——TeXstudio的安装与使用 | HanKai" data-tsina="2650480414" class="share clearfix">
+	  <div data-url="http://hankai.xyz/2015/07/15/Geek-Tech/Linux-C-Start/" data-title="Linux下C/C++基本开发环境搭建 | HanKai" data-tsina="2650480414" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -297,18 +302,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/12/12/MOOC-DS/MOOC-DS-2/" title="MOOC数据结构2——线性结构">
+ <a href="/2015/07/27/Machine-Learning/LIBSVM-Python/" title="Python使用LIBSVM入门">
   <strong>上一篇：</strong><br/>
   <span>
-  MOOC数据结构2——线性结构</span>
+  Python使用LIBSVM入门</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2014/12/04/Geek-Talk/Spark/"  title="Spark简介">
+<a href="/2015/06/28/Caffe/Caffe-Start/"  title="Caffe入门指导">
  <strong>下一篇：</strong><br/> 
- <span>Spark简介
+ <span>Caffe入门指导
 </span>
 </a>
 </div>
@@ -317,7 +322,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2014/12/08/Varied-Tech/LaTeX1/" data-title="LaTeX指南1——TeXstudio的安装与使用" data-url="http://hankai.xyz/2014/12/08/Varied-Tech/LaTeX1/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/15/Geek-Tech/Linux-C-Start/" data-title="Linux下C/C++基本开发环境搭建" data-url="http://hankai.xyz/2015/07/15/Geek-Tech/Linux-C-Start/"></div>
 </section>
 
 
@@ -327,7 +332,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LaTeX与TeXstudio简介"><span class="toc-number">1.</span> <span class="toc-text">LaTeX与TeXstudio简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LaTeX"><span class="toc-number">1.1.</span> <span class="toc-text">LaTeX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TeXstudio"><span class="toc-number">1.2.</span> <span class="toc-text">TeXstudio</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TeXstudio安装与使用"><span class="toc-number">2.</span> <span class="toc-text">TeXstudio安装与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置TeXstudio和MikTex"><span class="toc-number">2.1.</span> <span class="toc-text">配置TeXstudio和MikTex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#玩一下"><span class="toc-number">2.2.</span> <span class="toc-text">玩一下</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本开发环境"><span class="toc-number">1.</span> <span class="toc-text">基本开发环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake配置"><span class="toc-number">2.</span> <span class="toc-text">CMake配置</span></a></li></ol>
  
   </div>
 
@@ -367,7 +372,7 @@
 		  
 		
 		  
-			<li><a href="/categories/杂技/" title="杂技">杂技<sup>2</sup></a></li>
+			<li><a href="/categories/杂技/" title="杂技">杂技<sup>3</sup></a></li>
 		  
 		
 		  
@@ -386,7 +391,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 17.5px;">C++</a><a href="/tags/Caffe/" style="font-size: 10px;">Caffe</a><a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a><a href="/tags/GitHub/" style="font-size: 15px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a><a href="/tags/LIBSVM/" style="font-size: 10px;">LIBSVM</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/MOOC/" style="font-size: 17.5px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 12.5px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/刘翔/" style="font-size: 10px;">刘翔</a><a href="/tags/博客/" style="font-size: 17.5px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 17.5px;">建站</a><a href="/tags/感性/" style="font-size: 10px;">感性</a><a href="/tags/散列/" style="font-size: 10px;">散列</a><a href="/tags/数据结构/" style="font-size: 17.5px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12.5px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/理性/" style="font-size: 10px;">理性</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12.5px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12.5px;">青春</a>
+       <a href="/tags/AVL树/" style="font-size: 10px;">AVL树</a><a href="/tags/C/" style="font-size: 17.5px;">C++</a><a href="/tags/C-C/" style="font-size: 10px;">C/C++</a><a href="/tags/CMake/" style="font-size: 10px;">CMake</a><a href="/tags/Caffe/" style="font-size: 10px;">Caffe</a><a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a><a href="/tags/GitHub/" style="font-size: 15px;">GitHub</a><a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a><a href="/tags/LIBSVM/" style="font-size: 10px;">LIBSVM</a><a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a><a href="/tags/Linux/" style="font-size: 10px;">Linux</a><a href="/tags/MOOC/" style="font-size: 17.5px;">MOOC</a><a href="/tags/Machine-Learning/" style="font-size: 15px;">Machine Learning</a><a href="/tags/MikTex/" style="font-size: 10px;">MikTex</a><a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a><a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a><a href="/tags/Python/" style="font-size: 20px;">Python</a><a href="/tags/SVM/" style="font-size: 12.5px;">SVM</a><a href="/tags/Scrapy/" style="font-size: 10px;">Scrapy</a><a href="/tags/Spark/" style="font-size: 10px;">Spark</a><a href="/tags/Texstudio/" style="font-size: 10px;">Texstudio</a><a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a><a href="/tags/kNN/" style="font-size: 10px;">kNN</a><a href="/tags/scriptogr/" style="font-size: 10px;">scriptogr</a><a href="/tags/test/" style="font-size: 10px;">test</a><a href="/tags/二分法/" style="font-size: 10px;">二分法</a><a href="/tags/二叉树/" style="font-size: 10px;">二叉树</a><a href="/tags/刘翔/" style="font-size: 10px;">刘翔</a><a href="/tags/博客/" style="font-size: 17.5px;">博客</a><a href="/tags/图/" style="font-size: 10px;">图</a><a href="/tags/堆栈/" style="font-size: 10px;">堆栈</a><a href="/tags/大数据/" style="font-size: 10px;">大数据</a><a href="/tags/年少轻狂/" style="font-size: 10px;">年少轻狂</a><a href="/tags/并查集/" style="font-size: 10px;">并查集</a><a href="/tags/建站/" style="font-size: 17.5px;">建站</a><a href="/tags/感性/" style="font-size: 10px;">感性</a><a href="/tags/散列/" style="font-size: 10px;">散列</a><a href="/tags/数据结构/" style="font-size: 17.5px;">数据结构</a><a href="/tags/未来/" style="font-size: 10px;">未来</a><a href="/tags/朴素贝叶斯/" style="font-size: 10px;">朴素贝叶斯</a><a href="/tags/树/" style="font-size: 12.5px;">树</a><a href="/tags/梦想/" style="font-size: 10px;">梦想</a><a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a><a href="/tags/理性/" style="font-size: 10px;">理性</a><a href="/tags/翻译/" style="font-size: 10px;">翻译</a><a href="/tags/读书/" style="font-size: 12.5px;">读书</a><a href="/tags/链表/" style="font-size: 10px;">链表</a><a href="/tags/队列/" style="font-size: 10px;">队列</a><a href="/tags/青春/" style="font-size: 12.5px;">青春</a>
     </div>
   </div>
 
