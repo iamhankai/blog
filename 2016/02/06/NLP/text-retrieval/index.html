@@ -258,7 +258,7 @@
 <h2 id="词袋模型">词袋模型</h2><p>在文本处理中，词袋模型是一种很常用的特征选取方法。详见博主的另一篇博文<a href="http://hankai.xyz/2015/02/16/Machine-Learning/Bayes/" target="_blank" rel="external">朴素贝叶斯分类器过滤垃圾邮件</a>。词袋模型太简单粗暴了，每个词的权重是不同的，我们需要更细致地处理每个词在评分中的权重，而不是简单的词数。这就是接下来要讲的TF-IDF技术。</p>
 <h2 id="TF-IDF">TF-IDF</h2><p>词袋模型选好了，那么，每个词的权重主要和两个因素有关——词频和逆文档频率。</p>
 <h3 id="TF">TF</h3><p>词频（Term Frequency, TF）就是一篇文档中某词出现的频率（或次数）。TF与词权重的关系不是简单的线性关系，文档$d$中词$t$的权重为<br>$$<br>w<em>{ t,d } = 1+log</em>{ 10 }(\text{ tf }_{ t,d })<br>$$</p>
-<p>$$<br>w = 1+log<em>{ 10 }({ tf }</em>{ t,d })<br>$$</p>
+<p>$$<br>w = 1+log_{ 10 }<br>$$</p>
 <p>$$<br>P(c_i|x) = \frac{ P(x|c_i)log(c_i) }{ P(x) }<br>$$<br>TF对一篇文档中不同词的权重起到调节作用，也就是某文档中某词出现次数越多，该词在检索时权重越大。</p>
 <h3 id="IDF">IDF</h3><p>文档频率（Document Frequency, DF）指的是含有某词的文档在所有文档中出现的频率（或次数）。所有文档数为$N$，词$t$的逆文档频率（Inverse Document Frequency, IDF）的计算方式为<br>$$<br>\text{idf}<em>t = \log</em>{10}(N/\text{df}_t)<br>$$</p>
 <p>IDF对所有文档中不同词的权重起到调节作用，也就是在文档库中某词越罕见，其在检索时权重越大。</p>
