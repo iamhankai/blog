@@ -249,7 +249,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文本检索的任务"><span class="toc-number">1.</span> <span class="toc-text">文本检索的任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#词袋模型"><span class="toc-number">2.</span> <span class="toc-text">词袋模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TF-IDF"><span class="toc-number">3.</span> <span class="toc-text">TF-IDF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TF"><span class="toc-number">3.1.</span> <span class="toc-text">TF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDF"><span class="toc-number">3.2.</span> <span class="toc-text">IDF</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文本检索的任务"><span class="toc-number">1.</span> <span class="toc-text">文本检索的任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#词袋模型"><span class="toc-number">2.</span> <span class="toc-text">词袋模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TF-IDF"><span class="toc-number">3.</span> <span class="toc-text">TF-IDF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TF"><span class="toc-number">3.1.</span> <span class="toc-text">TF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDF"><span class="toc-number">3.2.</span> <span class="toc-text">IDF</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#余弦度量"><span class="toc-number">4.</span> <span class="toc-text">余弦度量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#余弦"><span class="toc-number">4.1.</span> <span class="toc-text">余弦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lnc-ltc"><span class="toc-number">4.2.</span> <span class="toc-text">lnc.ltc</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -263,6 +263,15 @@
 <h3 id="IDF">IDF</h3><p>文档频率（Document Frequency, DF）指的是含有某词的文档在所有文档中出现的频率（或次数）。所有文档数为$N$，词$t$的逆文档频率（Inverse Document Frequency, IDF）的计算方式为</p>
 <p>$$<br>\mathtt{idf}<em>t = \log</em>{ 10 }(N/\mathtt{df}_t)<br>$$</p>
 <p>IDF对所有文档中不同词的权重起到调节作用，也就是在文档库中某词越罕见，其在检索时权重越大。</p>
+<h2 id="余弦度量">余弦度量</h2><h3 id="余弦">余弦</h3><p>检索时，将query和文档都表示为TF-IDF向量，我们使用query和文档特征向量之间夹角的大小对文档进行排序，也就是角度越小（余弦越大），排得越靠前。<br>$$<br>cos(q,d)=\frac{q\cdot d}{|q||d|}<br>$$</p>
+<p>其中，$q$和$d$分别是query和文档的特征向量。</p>
+<h3 id="lnc-ltc">lnc.ltc</h3><p>在TF-IDF框架下计算余弦值，TF-IDF的组合有多种方式。有一种比较标准的做法——lnc.ltc</p>
+<blockquote>
+<ul>
+<li>Document: logarithmic tf(l), no idf(n), cosine normalization (c)</li>
+<li>Query: logarithmic tf(l), idf (t), cosine normalization (c)</li>
+</ul>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -321,7 +330,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文本检索的任务"><span class="toc-number">1.</span> <span class="toc-text">文本检索的任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#词袋模型"><span class="toc-number">2.</span> <span class="toc-text">词袋模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TF-IDF"><span class="toc-number">3.</span> <span class="toc-text">TF-IDF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TF"><span class="toc-number">3.1.</span> <span class="toc-text">TF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDF"><span class="toc-number">3.2.</span> <span class="toc-text">IDF</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文本检索的任务"><span class="toc-number">1.</span> <span class="toc-text">文本检索的任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#词袋模型"><span class="toc-number">2.</span> <span class="toc-text">词袋模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TF-IDF"><span class="toc-number">3.</span> <span class="toc-text">TF-IDF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TF"><span class="toc-number">3.1.</span> <span class="toc-text">TF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IDF"><span class="toc-number">3.2.</span> <span class="toc-text">IDF</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#余弦度量"><span class="toc-number">4.</span> <span class="toc-text">余弦度量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#余弦"><span class="toc-number">4.1.</span> <span class="toc-text">余弦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lnc-ltc"><span class="toc-number">4.2.</span> <span class="toc-text">lnc.ltc</span></a></li></ol></li></ol>
  
   </div>
 
